@@ -6,29 +6,18 @@ for (let i = 0; i < 20; i++) {
 }
 
 const buttonContainer1 = document.getElementById("buttonContainer1")
-    const buttonContainer2 = document.getElementById("buttonContainer2")
-    //buttonContainer.innerHTML = "";
-    for (let i = 0; i < buttonList.length; i++) {
-        const button = document.createElement("button")
-        button.textContent = buttonList[i].toString()
-        button.onclick = function() {
-            list.push(buttonList[i])
-            console.log(list)
-            let copyButton = button.cloneNode(true)
-            buttonContainer2.appendChild(copyButton)
-        }
-        buttonContainer1.appendChild(button)
+const buttonContainer2 = document.getElementById("buttonContainer2")
+//buttonContainer.innerHTML = "";
+for (let i = 0; i < buttonList.length; i++) {
+    const button = document.createElement("button")
+    button.textContent = buttonList[i].toString()
+    button.onclick = function() {
+        list.push(buttonList[i])
+        console.log(list)
+        let copyButton = button.cloneNode(true)
+        buttonContainer2.appendChild(copyButton)
     }
-
-
-/*
-function addSquare() {
-    // Get the value of the input
-    const size = document.getElementById("listInput").value
-    // Add the number to a list
-    list.push(size)
-    // Clear the input field
-    document.getElementById("listInput").value=null
+    buttonContainer1.appendChild(button)
 }
 
 function doneSquare() {
@@ -45,14 +34,17 @@ function doneSquare() {
         const square = document.createElement("div")
         square.className = "square"
         square.style.width = 30 + "px"
-        square.style.height = list[i] + "px"
+        square.style.height = (list[i]*5) + "px"
         container.appendChild(square)
     }
 
     // Clear the list
     list = []
-}
+    // Clear the buttonContainer2
+    document.getElementById("buttonContainer2").innerHTML = ""
 
+}
+/*
 function clearSquare() {
     // Get square container
     const container = document.getElementById("squareContainer")
