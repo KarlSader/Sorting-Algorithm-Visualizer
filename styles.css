@@ -1,0 +1,11 @@
+.square {
+    background-color: blue; /* Square color */
+    display: flex;          /* Centers text inside the square */
+    justify-content: center; /* Centers text horizontally */
+    align-items: center;    /* Centers text vertically */
+    color: white;           /* Text color */
+    font-size: 20px;        /* Text size */
+    width: 100px;           /* Initial width */
+    height: 100px;          /* Initial height */
+    transition: width 0.3s, height 0.3s; /* Smooth resizing */
+}
