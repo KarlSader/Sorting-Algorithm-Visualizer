@@ -1,3 +1,8 @@
+.container {
+    display: flex; /* Use flexbox to arrange squares side by side */
+    gap: 10px;     /* Space between squares */
+    margin: 20px;  /* Margin around the container */
+}
 .square {
     background-color: blue; /* Square color */
     display: flex;          /* Centers text inside the square */
@@ -5,7 +10,7 @@
     align-items: center;    /* Centers text vertically */
     color: white;           /* Text color */
     font-size: 20px;        /* Text size */
-    width: 100px;           /* Initial width */
-    height: 100px;          /* Initial height */
+    width: 100px;           /* Width of the square */
+    height: 100px;          /* Height of the square */
     transition: width 0.3s, height 0.3s; /* Smooth resizing */
 }
